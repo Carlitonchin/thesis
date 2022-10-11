@@ -1,2 +1,25 @@
 \chapter*{Introducción}\label{chapter:introduction}
 \addcontentsline{toc}{chapter}{Introducción}
+
+Todo usuario de la Universidad en caso de presentar algún problema determinado debe contactar con su administrador de área personalmente, realizar una llamada telefónica o escribir a un buzón de atención a usuarios. La situación pandémica aún vigente nos ha demostrado la necesidad de ser capaces de atender situaciones fuera del recinto laboral e incluso fuera del horario laboral, mientras no existe un mecanismo automático que permita una interacción segura y estable entre el usuario y quien lo atenderá. Por otra parte, cada resolución puede implicar un determinado conjunto de informaciones laborales no registradas actualmente, como pueden ser los elementos que formaron parte de la solución.\newline
+
+Por ello surge la necesidad de crear una plataforma digital que pueda resolver este problema, una plataforma en que los usuarios puedan escribir sus dudas, y mediante un mecanismo de clasificación estas lleguen a la persona correcta que se encargue de darles respuesta, y así evitar procesos demorados como los que se expusieron anteriormente.\newline
+
+Existen algunos sistemas en línea creados para resolver este tipo de problema, pero con el inconveniente de que muchos son de pago, y no pueden personalizarse a la medida de las necesidades de la Universidad. También, el sistema debe conectarse y convivir con otros sistemas existentes en la Universidad, y esto no es posible de hacer utilizando un producto de terceros, por ello es indispensable crear un software a medida que cumpla con todos esas características.\newline
+
+El sistema a crear debe cumplir los siguientes requerimientos:
+\begin{itemize}
+	\item Los usuarios se deben poder crear una cuenta en la plataforma con la cual iniciar sesión.
+	
+	\item Los usuarios se deben dividir en 5 roles: estudiante, clasificador, administrador, especialista de nivel 1 y especialista de nivel 2.
+	
+	\item Los estudiantes deben ser capaces de escribir sus dudas, ver su historial de dudas con sus respectivas respuestas y, por cada duda, deben poder abrir un chat con los responsables de darle respuesta.
+	
+	\item Los clasificadores deben ser capaces de ver las dudas sin clasificar, y deben poder clasificarlas eligiendo un área de un conjunto previamente creado por el administrador.
+	
+	\item Los administradores deben poder crear áreas en las cuales se clasificarán las preguntas, pueden responder cualquier pregunta independientemente del área en que haya sido clasificada, asignarle áreas a los especialistas de nivel 1 y nivel 2, ver la información de los usuarios registrados en el sistema, cambiar de rol a cualquier usuario y, por cada duda, chatear con el estudiante autor de esta.
+	
+	\item Los especialistas de nivel 1 deben pertenecer al área que el administrador haya decidido, deben ver el listado de preguntas clasificadas en su área, responder dichas preguntas, subir la pregunta de nivel en el caso de no poder responderla, y, por cada duda, chatear con el estudiante autor de esta.
+	
+	\item Los especialistas de nivel 2 deben pertenecer al área que el administrador haya decidido, deben ver el listado de las preguntas clasificadas en su área que hayan sido subidas de nivel por algún especialista de nivel 1, deben poder responder dichas preguntas, subir a la administración las dudas que no sean capaces de responder, y, por cada duda, chatear con el estudiante autor de esta.
+\end{itemize}
