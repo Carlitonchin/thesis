@@ -1,1 +1,72 @@
 \chapter{Estado del Arte}\label{chapter:state-of-the-art}
+
+El mundo en que vivimos se caracteriza por estar cada vez más conectado, por lo que las aplicaciones web no paran de crecer, estas a día de hoy son la opción número 1 a la hora de desarrollar software que debe ser consumido por un gran número de usuarios.
+
+\section{API REST}
+\textbf{API:} Las API (interfaz de programación de aplicaciones) son mecanismos que permiten a dos componentes de software comunicarse entre sí mediante un conjunto de definiciones y protocolos \cite{apirest}.
+\newline
+
+\textbf{API REST:} REST significa transferencia de estado representacional. REST define un conjunto de funciones como GET, PUT, DELETE, etc. que los clientes pueden utilizar para acceder a los datos del servidor. Los clientes y los servidores intercambian datos mediante HTTP \cite{apirest}.
+\newline
+
+Las API REST son las más utilizadas en el desarrollo web a día de hoy.
+
+\section{Frontend}
+Los días en que bastaba \textit{HTML}, \textit{CSS} y \textit{Javascript Vanilla} (Javascript sin bibliotecas ni frameworks de terceros) para construir el frontend de una aplicación quedaron atrás. La complejidad de los productos actuales ha hecho que sea prácticamente imposible mantener software con estas tecnologías, por lo que los frameworks y bibliotecas de Javascript son prácticamente obligatorios a la hora de desarrollar una buena aplicación.
+\newline
+
+Según una encuesta desarrollada por StackOverflow en 2022 los frameworks y/o bibliotecas más usados en el desarrollo frontend son: \textit{React.js}, \textit{jQuery}, \textit{Angular} y \textit{Vue.js} \cite{encuesta2022}.
+
+\subsection{Vue.js}
+El framework utilizado para desarrollar el sistema fue \textit{Nuxt.js} (framework de \textit{Vue.js}) por todas las ventajas que proporciona.
+\newline
+
+\textbf{Vue.js:} es un framework de Javascript para construir interfaces de usuario. Está construido sobre \textit{HTML}, \textit{CSS} y \textit{Javascript}, y provee un modelo de programación declarativo y basado en componentes que te ayuda a implementar soluciones de una manera eficiente \cite{vue}.
+\newline
+
+\textbf{Nuxt.js:} es un framework construido encima de \textit{Vue.js} que brinda ciertas ventajas tales como enrutamiento automático, renderizado híbrido (renderizado del lado del cliente y del lado del servidor), optimización para motores de búsqueda, entre otras \cite{nuxt}.
+
+\section{Backend}
+Según la encuesta de StackOverflow del 2022 \cite{encuesta2022} estos son los lenguajes de programación más usados: 
+\begin{enumerate}
+	\item JavaScript
+	\item Python
+	\item TypeScript
+	\item Java
+	\item Bash/Shell
+	\item C#
+	\item C++
+	\item PHP
+	\item PowerShell
+	\item Go
+	\item Rust
+\end{enumerate}
+No se incluyeron en la lista lenguajes de marcado y estilos (\textit{HTML} y \textit{CSS}) ni lenguajes de consulta (\textit{SQL})
+\newline
+
+Para el backend de este proyecto nos decantamos por \textit{Go} por su eficiencia y facilidad a la hora de desarrollar concurrencia
+\subsection{Go}
+\textbf{Go:} es un lenguaje de programación de código abierto desarrollado por Google. Es expresivo, conciso, limpio, y eficiente. Su mecanismo de concurrencia hace fácil escribir programas con estas características. Compila rápido a código de máquina, tiene recolector de basura. Es rápido y estáticamente tipado \cite{golang}.
+\newline
+
+\textit{Go} es muy utilizado para desarrollar backend de aplicaciones web, tiene varios frameworks de este estilo tales como \href{https://gobuffalo.io/en/}{Buffalo}, \href{https://echo.labstack.com/}{Echo}, \href{https://www.flamingo.me/}{Flamingo}, \href{http://www.gorillatoolkit.org/}{Gorilla}, y \href{https://gin-gonic.com/}{Gin}. Para este proyecto nos decantamos por \textit{Gin}.
+\newline
+
+\textbf{Gin:} es un framework web desarrollado sobre \textit{Go}. Es muy rápido y provee muchas facilidades a la hora de desarrollar una \textit{REST API} \cite{gin}.
+
+\section{Base de datos}
+Según la encuesta de StackOverflow de 2022 \cite{encuesta2022} los motores de base de datos más utilizados son:
+\begin{enumerate}
+	\item MySQL
+	\item PostgreSQL
+	\item SQLite
+	\item MongoDB
+	\item Microsoft SQL Server
+	\item Redis
+\end{enumerate}
+\newline
+
+Para este proyecto estaremos utilizando \textit{PostgreSQL} para almacenar los datos del sistema y \textit{Redis} para almacenar tokens de usuarios.
+\newline
+
+\textbf{PostgreSQL:} es un sistema de base de datos relacional muy poderoso y de código abierto con más de 35 años de desarrollo activo \cite{postgres}.
