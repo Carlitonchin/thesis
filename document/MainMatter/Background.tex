@@ -26,6 +26,9 @@ El framework utilizado para desarrollar el sistema fue \textit{Nuxt.js} (framewo
 
 \textbf{Nuxt.js:} es un framework construido encima de \textit{Vue.js} que brinda ciertas ventajas tales como enrutamiento automático, renderizado híbrido (renderizado del lado del cliente y del lado del servidor), optimización para motores de búsqueda, entre otras \cite{nuxt}.
 
+\subsection{Tailwind CSS}
+\textit{Tailwind CSS} es un framework de \textit{CSS} orientado a utilidades que tiene varias clases \textit{CSS} predefinidas que ayudan a estilizar una página sin abandonar el \textit{HTML} \cite{tailwind}.
+
 \section{Backend}
 Según la encuesta de StackOverflow del 2022 \cite{encuesta2022} estos son los lenguajes de programación más usados: 
 \begin{enumerate}
@@ -34,7 +37,7 @@ Según la encuesta de StackOverflow del 2022 \cite{encuesta2022} estos son los l
 	\item TypeScript
 	\item Java
 	\item Bash/Shell
-	\item C#
+	\item C\#
 	\item C++
 	\item PHP
 	\item PowerShell
@@ -64,9 +67,34 @@ Según la encuesta de StackOverflow de 2022 \cite{encuesta2022} los motores de b
 	\item Microsoft SQL Server
 	\item Redis
 \end{enumerate}
-\newline
 
 Para este proyecto estaremos utilizando \textit{PostgreSQL} para almacenar los datos del sistema y \textit{Redis} para almacenar tokens de usuarios.
 \newline
 
 \textbf{PostgreSQL:} es un sistema de base de datos relacional muy poderoso y de código abierto con más de 35 años de desarrollo activo \cite{postgres}.
+\newline
+
+\textbf{Redis:} es una base de datos en memoria de código abierto usada principalmente como caché, motor de streaming, bróker de mensajes, entre otros usos \cite{redis}.
+
+\subsection{ORM}
+Un \textit{ORM} (Object–relational mapping) es una técnica de programación para convertir datos entre sistemas de tipos usando lenguajes de programación orientado a objetos. Esto crea una base de datos virtual que puede ser usada desde un lenguaje de programación \cite{orm}.
+\newline
+
+\textbf{Gorm:} es una biblioteca de ORM de \href{https://go.dev/}{Go} \cite{gorm}.
+
+\section{JWT}
+
+\textit{JSON Web Token} (\textit{JWT}) es un estándar abierto basado en JSON para la creación de tokens de acceso que permiten la propagación de identidad y privilegios \cite{jwt}.
+
+\section{Docker}
+
+\textit{Docker} es una herramienta que hace el desarrollo de una aplicación sea más eficiente y predecible, eliminando tareas de configuración repetitivas, para ello hace uso de \textit{contenedores} e \textit{imágenes} \cite{docker}.
+\newline
+
+\textbf{Contenedor:} en \textit{Docker} un contenedor no es más que un proceso que corre en una PC de forma aislada al resto de procesos \cite{docker_docs}.
+\newline
+
+\textbf{Imagen:} Una imagen de Docker es una plantilla de solo lectura que define su contenedor. La imagen contiene el código que se ejecutará, incluida cualquier definición para cualquier biblioteca o dependencia que el código necesite \cite{docker_docs}.
+\newline
+
+Durante el desarrollo del proyecto se utilizó \textit{Docker} por todas las ventajas que provee. Esta herramienta es la más amada por los desarrolladores según la encuesta de 2022 de \href{https://stackoverflow.com/}{StackOverflow} \cite{encuesta2022}.
