@@ -1,1 +1,99 @@
 \chapter{Detalles de Implementación y Experimentos}\label{chapter:implementation}
+
+El proyecto está compuesto por una REST API desarrollada en \href{https://gin-gonic.com/}{Gin} y un frontend desarrollado con \href{https://nuxtjs.org/}{Nuxt.js}.
+\newline
+
+Para el backend se usará una base de datos \href{https://www.postgresql.org/}{PostgreSQL} que será manejada a través del \textit{ORM} \href{https://gorm.io/}{Gorm}, se usará un sistema de \textit{JWT} para la autenticación, y los tokens de los usuarios se almacenarán en memoria usando una base de datos \href{https://redis.io/}{Redis}.
+\newline
+
+Para el frontend estaremos usando la \href{https://nuxtjs.org/}{Nuxt.js} en su versión 3.0, y nos apoyaremos de \href{https://tailwindcss.com/}{Tailwind CSS} para estilizar las vistas.
+
+\section{Estructura de la Base de Datos}
+\subsection{Tabla roles}
+
+\begin{itemize}
+	\item \textbf{id} (llave primaria, int)
+	\item \textbf{name} (str)
+\end{itemize}
+
+\subsection{Tabla areas}
+
+\begin{itemize}
+	\item \textbf{id} (llave primaria, int)
+	\item \textbf{name} (str)
+\end{itemize}
+
+\subsection{Tabla users}
+
+\begin{itemize}
+	\item \textbf{id} (llave primaria, int)
+	\item \textbf{name} (str)
+	\item \textbf{email} (str)
+	\item \textbf{password} (str)
+	\item \textbf{role\_id} (llave foránea (roles), int)
+	\item \textbf{area\_id} (llave foránea (areas), int)
+\end{itemize}
+
+\subsection{Tabla statuses}
+
+Las preguntas enviadas por los estudiantes pueden estar en un estado determinado:
+
+\begin{itemize}
+	\item \textbf{enviada:} el estudiante envió la pregunta y nadie ha interactuado con esta.
+	
+	\item \textbf{clasificada nivel 1:} un clasificador clasificó la pregunta en un área determinada.
+	
+	\item \textbf{clasificada nivel 2:} un especialista nivel 1 que se había hecho responsable la pregunta, no pudo responderla y la elevó al nivel 2.
+	
+	\item \textbf{clasificada admin:} un especialista de nivel 2, que se había hecho responsable de la pregunta que había sido previamente elevada al nivel 2, no pudo responderla y la elevó a la administración.
+	
+	\item \textbf{resuelta:} un especialista de nivel 1, de nivel 2, o un administrador respondió la pregunta.
+	
+\end{itemize}
+
+Estos estados se encuentran almacenados en la tabla \textbf{statuses}, que tiene la siguiente estructura:
+
+\begin{itemize}
+	\item \textbf{id} (llave primaria, int)
+	\item \textbf{description} (str)
+\end{itemize}
+
+\subsection{Tabla questions}
+
+\begin{itemize}
+	\item \textbf{id} (llave primaria, int)
+	\item \textbf{text} (str)
+	\item \textbf{response} (str)
+	\item \textbf{status\_id} (llave foránea (statuses), int)
+	\item \textbf{user\_author} (llave foránea (users), int)
+    \item \textbf{user\_responsible} (llave foránea (users), int)
+\end{itemize}
+
+\subsection{Tabla message\_chats}
+
+\begin{itemize}
+	\item \textbf{id} (llave primaria, int)
+	\item \textbf{text} (str)
+	\item \textbf{readed} (boolean)
+	\item \textbf{question\_id} (llave foránea (questions), int)
+	\item \textbf{user\_id} (llave foránea (users), int)
+\end{itemize}
+
+\section{Backend}
+
+\subsection{Estructura:}
+El backend se estructura por capas:
+\newline
+
+\includegraphics[width=13.8cm, height=2.5cm]{structure_backend.png}
+
+La capa \textbf{Handler} es la encargada de interceptar los requests, interactuar con los permisos, detectar posibles errores dentro del request recibido, preparar las estructuras necesarias para finalmente ejecutar alguno(s) de los servicios de la capa \textbf{Service} para luego retornar el response adecuado para el request.
+\newline
+
+La capa \textbf{Service} consta de varios servicios tales como iniciar sesión, registrarse, etc, esta se encarga de ejecutar los pasos necesarios para la acción requerida, abstrayéndose de las validaciones del requests (porque ya fue hecho por la capa \textbf{Handler}), para obtener datos deberá pedírselos a la capa \textbf{Repository} y luego retornarlos a la capa \textbf{Handler}.
+\newline
+
+La capa \textbf{Repository} es la encargada de las operaciones con la base de datos, para ello recibe indicaciones de la capa \textbf{Serivice} y auxiliándose del \textit{ORM} \href{gorm.io}{Gorm} y inserta, modifica, lee, y/o elimina datos y le entrega una respuesta a la capa \textbf{Service}.
+\newline
+
+La capa \textbf{Models} tiene, con la sintaxis de estructuras de \href{go.dev}{Go}, se describen todas las entidades y las relaciones de la base de datos, para ello hace uso del \textit{ORM} \href{gorm.io}{Gorm}.

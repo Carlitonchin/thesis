@@ -1,5 +1,49 @@
 \chapter{Estado del Arte}\label{chapter:state-of-the-art}
 
+A continuación se presentan un conjunto de artículos y/o herramientas punteras a día de hoy en términos de sistemas de resolución de dudas, además de los principales lenguajes, bibliotecas y frameworks utilizados en el mundo del desarrollo de software.
+
+\section{Sistemas de Recuperación de información}
+
+La \textbf{recuperación de información} en computación es el proceso de obtener recursos relevantes dentro de una colección de documentos dada una consulta \cite{ir}.
+\newline
+
+Los sistemas de recuperación de información pueden ser de texto, imágenes, videos, audios, etc. A día son utilizados por millones de usuarios cada día. El motor de búsqueda de \href{google.com}{Google}, el buscador de \href{youtube.com}{Youtube}, son ejemplo de esto.
+\newline
+
+Estos sistemas también son usados en el desarrollo de aplicaciones automatizadas de respuesta a preguntas. (veremos algunos ejemplos de esto más adelante)
+
+\section{Hugging Face}
+
+\textbf{Hugging Face Inc.} es una compañía norteamericana especializada en el desarrollo de herramientas y aplicaciones con el uso de Machine Learning \cite{hugging_face}.
+\newline
+
+Hugging Face Hub es una plataforma donde los usuarios pueden compartir datasets, modelos de machine learning, para que puedan ser usados y/o mejorados por la comunidad \cite{hugging_face_hub}.
+
+\section{Procesamiento de lenguaje natural}
+
+El \textbf{procesamiento de lenguaje natural} es un campo de la inteligencia artificial que estudia la interacción entre las computadoras y el lenguaje humano. Se encarga de la investigación y desarrollo de mecanismos para la comunicación entre humanos y máquinas por medio del lenguaje natural \cite{nlp}.
+\newline
+
+\textbf{BERT:} Bidirectional Encoder Representations from Transformers (BERT) es un modelo del lenguaje de machine learning desarrollado por \href{google.com}{Google} y publicado en 2018 \cite{bert}. El árticulo que describió la investigación de BERT ganó el Best Long Paper Award en la Conferencia Anual del 2019 de la North American Chapter of the Association for Computational Linguistics (NAACL) \cite{bert_award}.
+\newline
+
+\textbf{GPT-3:} Generative Pre-trained Transformer 3 (GPT-3) es un modelo del lenguaje desarrollado por \href{https://openai.com/}{Open AI} capaz de generar textos que simulan la redacción humana \cite{gpt}. Este poderoso modelo de 175 000 millones de parámetro desde su creación se ha destacado por generar textos de alta calidad.
+
+\section{NSIR}
+
+\textbf{NSIR} es un sistema desarrollado por la Universidad de Michigan que responde preguntas de forma automática. Dada una pregunta \textbf{NSIR} obtiene los principales resultados devueltos por motores de búsqueda (\href{google.com}{Google}, \href{yahoo.com}{Yahoo}, etc), los analiza y extrae de estos un conjunto de posibles respuestas, luego estas son evaluadas usando novedosas métricas, y de ahí retornan al usuario las respuestas con mejor calificación \cite{nsir}.
+
+\section{Schema2QA}
+
+\textbf{Schema2QA} es una herramienta de código abierto para generar sistemas de preguntas y respuestas a partir de un esquema de base de datos con unas pocas anotaciones sobre sus campos \cite{s2qa}. Este sistema intenta cubrir el espacio de consultas con un gran número de preguntas del dominio. Luego los datos obtenidos son usados para entrenar un modelo del lenguaje basado en \textit{BERT} \cite{bert}. Este sistema ha sido utilizado en dominios como los restaurantes, libros, música, entre otros, y alcanzado muy buenos resultados \cite{s2qa}.
+
+
+\section{SmartQ}
+
+\textbf{SmartQ} es un sistema de preguntas y respuestas basado en la reputación de los usuarios. Propone un mecanismo inteligente en la que hay usuarios especializados en diversas temáticas, y cuando alguien hace una pregunta esta es clasificada y enviada a personas expertas en el tema. Los usuarios van construyendo una reputación a medida que aportan respuestas valiosas a lo largo del tiempo. En el sistema también existe un mecanismo de seguidores en el que algunos usuarios expresan su confianza en otros, además de un sistema anti spam \cite{smartq}.
+
+\section{Desarrollo de software} 
+
 El mundo en que vivimos se caracteriza por estar cada vez más conectado, por lo que las aplicaciones web no paran de crecer, estas a día de hoy son la opción número 1 a la hora de desarrollar software que debe ser consumido por un gran número de usuarios.
 
 \section{API REST}
