@@ -1,16 +1,18 @@
 \chapter{Propuesta}\label{chapter:proposal}
 
-Existen varios sistemas automatizados de respuesta a preguntas, pero son de propósito general, por lo que habría que entrenar sus modelos del lenguaje con datos sobre la facultad \textit{MATCOM}, y ahora mismo no disponemos de esos datos y tampoco tenemos la infraestructura necesaria para llevar un proyecto de tales magnitudes, por lo que nos decantamos por un sistema de respuestas manual.
+Existen varios sistemas automatizados de respuesta a preguntas, pero son de propósito general, por lo que habría que entrenar sus modelos del lenguaje con datos sobre la facultad \textit{MATCOM}, y ahora mismo no se tienen esos datos, y tampoco la infraestructura necesaria para llevar a cabo un proyecto de tales magnitudes, por lo que es más factible optar por un sistema manual o híbrido.
 \newline
 
-Por otra parte, los sistemas manuales que existen, o son de pago, o no se acogen estrictamente a las necesidades de la facultad, además de que se contempla en un futuro integrar este sistema con otros ya existentes, y para ello es necesario que este sea totalmente personalizable para poder hacerlo a medida, y poder cambiarlo de acuerdo a las necesidades que se vayan presentando.
+Por otra parte, los sistemas manuales/híbridos que existen en el mercado, o son de pago, o no se acogen estrictamente a las necesidades de la facultad, además de que se contempla en un futuro integrar este sistema con otros proyectos, y para ello es necesario que este sea totalmente personalizable.
 \newline
 
-Proponemos desarrollar un proyecto web, por la facilidad que estos brindan de ser usados en cualquier lugar y dispositivo, el backend será una \textit{REST API} para poder desacoplarlo al máximo del frontend, y en un futuro, si se requiere, aprovechar el código para crear una aplicación móvil.
+Es preciso que sea un proyecto web, por la facilidad que estos brindan de ser usados en cualquier lugar y dispositivo.
 \newline
 
 El sistema tendrá las siguientes características:
 \newline
+
+\includegraphics[width=15cm, height=11.25cm]{thesis_diagram.png}
 
 \begin{itemize}
 	\item Los usuarios se deben poder crear una cuenta en la plataforma con la cual iniciar sesión.
@@ -21,7 +23,7 @@ El sistema tendrá las siguientes características:
 	
 	\item Los clasificadores deben ser capaces de ver las dudas sin clasificar, y deben poder clasificarlas eligiendo un área de un conjunto previamente creado por el administrador.
 	
-	\item Los administradores deben poder crear áreas en las cuales se clasificarán las preguntas, pueden responder cualquier pregunta independientemente del área en que haya sido clasificada, asignarle áreas a los especialistas de nivel 1 y nivel 2, ver la información de los usuarios registrados en el sistema, cambiar de rol a cualquier usuario y, por cada duda, chatear con el estudiante autor de esta.
+	\item Los administradores deben poder crear áreas en las cuales se clasificarán las preguntas, pueden responder cualquier pregunta independientemente del área en que haya sido clasificada, asignarle áreas a los especialistas de nivel 1 y nivel 2, ver la información de los usuarios registrados en el sistema, cambiar de rol a cualquier usuario y, por cada duda, chatear con el estudiante autor de la misma.
 	
 	\item Los especialistas de nivel 1 deben pertenecer al área que el administrador haya decidido, deben ver el listado de preguntas clasificadas en su área, responder dichas preguntas, subir la pregunta de nivel en el caso de no poder responderla, y, por cada duda, chatear con el estudiante autor de esta.
 	

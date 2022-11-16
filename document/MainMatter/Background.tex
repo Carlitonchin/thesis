@@ -1,8 +1,50 @@
 \chapter{Estado del Arte}\label{chapter:state-of-the-art}
 
-\section{Inteligencia Artificial}
+La resolución de dudas es algo cotidiano, la mayoría de las empresas e instituciones lidian con las dudas de sus clientes a diario, ya sea por redes sociales o por sus páginas oficiales. Los sistemas de gestión de dudas son softwares que facilitan esta comunicación entre una empresa/institución y una persona externa con alguna inquietud. Estos sistemas se pueden dividir en 3 grupos: manuales, automatizados, e híbridos.
+\newline
 
-La resolución de dudas es algo cotidiano, la mayoría de las empresas e instituciones lidian con las dudas de sus usuarios a diario, ya sea por redes sociales o por páginas oficiales. En muchas ocasiones, el volumen de preguntas es de tal magnitud que se necesitan a muchas personas pendientes, por lo que se han hecho estudios en pro de conseguir sistemas de resolución de dudas automatizados, los cuales hacen uso de una fusión entre sistemas de recuperación de información \cite{ir}, y modelos de procesamiento de lenguaje natural \cite{nlp}.
+Los sistemas manuales son aquellos en los que todo el proceso, desde que alguien expresa su inquietud, hasta que se le da respuesta, es realizado por personas, sin empleo de ninguna técnica de inteligencia artificial.
+\newline
+
+Los automatizados son aquellos en los que no intervienen personas en ninguna parte del proceso.
+\newline
+
+Y los híbridos son una mezcla de los dos anteriores, seres humanos participan en el proceso, pero son asistidos por inteligencia artificial. Mecanismos como la clasificación automática de preguntas, y chatbots que interactúan con el cliente, son de los más habituales en este tipo de sistemas. 
+
+\subsection{Sistemas manuales e híbridos}
+
+Hay varios softwares de este tipo en el mercado que son usados por múltiples empresas, a continuación se presentan algunos de los más populares:
+\newline
+
+\textbf{\href{https://www.helpscout.com/}{Help Scout}}
+\newline
+
+Es una poderosa herramienta de servicio al cliente. Tiene bandeja de entrada compartida, herramientas de gestión de clientes, mecanismos de reporte, chat en vivo, etc. Su bandeja de entrada compartida asegura que todo el equipo esté pendiente de las principales incidencias y da margen a la colaboración. Brinda la oportunidad de seguir las conversaciones de los clientes en un solo lugar, ya sea que el cliente mande un email o escriba directamente en el chat. Tiene herramientas de analítica para medir el rendimiento del equipo. Su precio comienza en 20 dólares por usuario al mes.
+\newline
+
+\textbf{\href{https://www.zendesk.com/}{Zendesk}}
+\newline
+
+Es una herramienta de servicio al cliente capaz de manejar comunicación a través de distintos canales, ya sea por email, facebook, twitter, chat en vivo, etc. Usa un sistema de inteligencia artificial de chatbots para ayudar a personalizar respuestas automatizadas hasta que un agente esté disponible para ayudar al cliente. Su precio comienza en 19 dólares por usuario al mes.
+\newline
+
+\textbf{\href{https://www.hubspot.com/}{HubSpot}}
+\newline
+
+Es una herramienta poderosa que incluye diversas opciones como ventas, marketing y servicio al cliente. Es personalizable de acuerdo a las necesidades de sus usuarios. Posee un sistema de mensajes de videos personalizados para ayudar a los clientes. Conecta email, chat en vivo, facebook, en un único canal de comunicación. Envía encuestas a los clientes para calificar el rendimiento del equipo. Tiene un plan gratuito.
+\newline
+
+\textbf{\href{https://freshdesk.com/}{Freshdesk}}
+\newline
+
+Herramienta de servicio al cliente empoderada con inteligencia artificial que ayuda a automatizar varias tareas. Posee un increíble feature de recomendarle al equipo artículos relacionados con cada incidencia para ayudarlos a resolverla. Tiene un sistema colaborativo que ayuda a diversos miembros del equipo a trabajar juntos en pro de la solución al problema. Tiene un sistema de auto asignación basado en inteligencia artificial que asigna una incidencia al mejor agente posible para esta. Es personalizable y tiene herramientas de analítica. Tiene un plan gratuito.
+\newline
+
+Como se puede apreciar estas herramientas están pensadas para empresas, son software ya desarrollados a los que no se les pueden realizar modificaciones y tienen un precio elevado (en los caso de Freshdesk y HubSpot tienen un plan gratuito, pero si se quiere disfrutar de los mejores features es necesario cambiarse a un plan de pago).
+
+\section{Sistemas automatizados}
+
+En los sistemas de resolución de dudas, en muchas ocasiones, el volumen de preguntas es de tal magnitud que se necesitan a muchas personas pendientes, por lo que se han hecho estudios en pro de conseguir sistemas de resolución de dudas automatizados, los cuales hacen uso de una fusión entre sistemas de recuperación de información \cite{ir}, y modelos de procesamiento de lenguaje natural \cite{nlp}.
 \newline
 
 La \textbf{recuperación de información} \cite{ir} en computación es el proceso de obtener recursos relevantes dentro de una colección de documentos dada una consulta. Existen sistemas de este tipo que son usados cada día por millones de usuarios, para recuperar texto, imágenes, videos, audios, etc. El motor de búsqueda de \href{google.com}{Google} y el buscador de \href{youtube.com}{Youtube} son solo un par de ejemplos.
@@ -18,7 +60,7 @@ Para solventar ese problema en los últimos años ha habido un auge en el \textb
 Award en la Conferencia Anual del 2019 de la North American Chapter of the Association for Computational Linguistics (NAACL) \cite{bert_award}.
 \newline
 
-\textbf{GPT-3} (Generative Pre-trained Transformer 3) es un modelo del lenguaje desarrollado por \href{https://openai.com/}{Open AI} capaz de generar textos que simulan la redacción humana. Este poderoso modelo de 175 000 millones de parámetro desde su creación se ha destacado por generar textos de alta calidad.
+\textbf{GPT-3} (Generative Pre-trained Transformer 3) es un modelo del lenguaje desarrollado por \href{https://openai.com/}{Open AI} capaz de generar textos que simulan la redacción humana. Este poderoso modelo de 175 000 millones de parámetros desde su creación se ha destacado por generar textos de alta calidad.
 \newline
 
 Entrenar estos modelos es una tarea titánica para la que se necesita una cantidad absurda de datos y hardware de última generación, por lo que se precisa de inversiones millonarias en infraestructura para poder conseguirlo.
@@ -26,6 +68,36 @@ Entrenar estos modelos es una tarea titánica para la que se necesita una cantid
 
 En el año 2016 fue fundada \href{https://huggingface.co/}{Hugging Face} \cite{hugging_face}, una compañía especializada en el desarrollo de herramientas y aplicaciones con el uso de machine learning, y han lanzado una plataforma llamada \textbf{Hugging Face Hub} \cite{hugging_face_hub}, en la que son compartidos muchísimos datasets y modelos que son usados y mejorados por la comunidad. Esto ha democratizado de cierta manera el uso de los grandes avances del aprendizaje automático.
 \newline
+
+Los sistemas de resolución de dudas automatizados son menos comunes que los manuales y los híbridos debido a que las empresas prefieren darle un trato más personalizado a sus clientes y con menos probabilidad de errores, pero en los últimos años debido al avance del hardware y las múltiples investigaciones en inteligencia artificial ya empiezan a nacer algunos sistemas interesantes dignos de mencionar:
+\newline
+
+\textbf{NSIR} \cite{nsir} es un sistema desarrollado por la Universidad de Michigan que responde preguntas de forma automática. Dada una pregunta \textbf{NSIR} obtiene los principales resultados devueltos por motores de búsqueda (\href{google.com}{Google}, \href{yahoo.com}{Yahoo}, etc), los analiza y extrae de estos un conjunto de posibles respuestas, luego estas son evaluadas usando novedosas métricas, y de ahí retornan al usuario las respuestas con mejor calificación. Esta herramienta es usada por el sistema de salud canadiense y en principio no está disponible en el mercado.
+\newline
+
+\textbf{Schema2QA} \cite{s2qa} es una herramienta de código abierto para generar sistemas de preguntas y respuestas a partir de un esquema de base de datos con unas pocas anotaciones sobre sus campos \cite{s2qa}. Este sistema intenta cubrir el espacio de consultas con un gran número de preguntas del dominio. Luego los datos obtenidos son usados para entrenar un modelo del lenguaje basado en \textit{BERT} \cite{bert}. Este sistema ha sido utilizado en dominios como los restaurantes, libros, música, entre otros, y alcanzado muy buenos resultados. No es un sistema listo para usar ya que requiere de un trabajo previo por especialistas para adaptarlo al área para el que se quiera implementar.
+\newline
+
+
+ En el caso de NSIR es un sistema muy interesante, con el inconveniente de que no es de código abierto, y requeriría de un equipo de especialistas capaces de estudiar a fondo el artículo e intentar replicarlo y adaptarlo a sus necesidades específicas. Por último Schema2QA sí es de código abierto, pero no está listo para usar, e igualmente requeriría de un grupo de expertos capaces de estudiar a fondo las herramientas que proponen, además de que requiere un esquema de bases de datos para su utilización y de infraestructura para entrenar un modelo del lenguaje.
+ \newline
+ 
+ \section{Resumen}
+ 
+ A continuación, a modo de resumen, se muestra una tabla comparativa de los sistemas previamente descritos.\newline
+ 
+ 
+ \begin{tabular}{| c | c | c | c | c |}
+ 	\hline
+ 	Sistema & De código abierto & Gratuito & Listo para usar & Tipo \\ \hline
+ 	Help Scout & No & Sí & Si & Manual \\ \hline 
+ 	Zendesk & No & No & Sí & Híbrido \\ \hline
+ 	HubSpot & No & No & Sí & Híbrido \\ \hline
+ 	Freshdesk & No & Sí & Sí & Híbrido \\ \hline
+ 	NSIR & No & No & No & Automatizado \\ \hline
+ 	Schema2QA & Sí & Sí & No & Automatizado \\ \hline
+ 	
+ \end{tabular}\newline
 
 \section{Desarrollo de software}
 
@@ -44,59 +116,63 @@ Los días en que bastaba \textit{HTML}, \textit{CSS} y \textit{Javascript Vanill
 Según una encuesta desarrollada por StackOverflow \cite{encuesta2022} en 2022 los frameworks y/o bibliotecas más usados en el desarrollo frontend son: \textit{React.js}, \textit{jQuery}, \textit{Angular} y \textit{Vue.js}.
 \newline
 
-Para estilizar las páginas se utiliza el lenguaje \textit{CSS}, pero debido a la naturaleza del mismo, en aplicaciones grandes el código \textit{CSS} crece demasiado y se hace muy difícil de mantener, por eso en algunas ocasiones los desarrolladores optan por usar frameworks que eviten de cierta manera estas complicaciones, dos de los más usados en la actualidad son \href{getbootstrap.com}{Bootstrap} [cita], y \href{tailwindcss.com}{Tailwind CSS} \cite{tailwind}.
+\textbf{React.js} \cite{react}, \textbf{Angular} \cite{angular} y \textbf{Vue.js} \cite{vue} son bibliotecas y/o frameworks de \textit{Javascript} para el desarrollo de interfaces de usuario interactivas. Básicamente con estas herramientas se pueden construir aplicaciones web grandes y complejas cuyas vistas son actualizadas sin necesidad de refrescar la página.
 \newline
 
-En el caso del backend existe una mayor variedad de tecnologías, por lo que los desarrolladores suelen elegir la que más se adecúa al proyecto que buscan desarrollar, en estos casos es casi imprescindible utilizar un framework, ya que las bases de código en aplicaciones no tan complejas suele crecer muchísimo por lo que puede haber problemas en el mantenimiento de las mismas y pueden surgir agujeros de seguridad.
+\textbf{JQuery} \cite{jquery}, por su lado, es una biblioteca de \textit{Javascript} lanzada en 2006 para facilitar el manejo del DOM, la creación de animaciones, las peticiones AJAX, el manejo de eventos, entre otras funcionalidades en el desarrollo web. JQuery, en sus inicios, se volvió extremadamente popular y, aunque a día de hoy no suele ser la mejor opción, está en el núcleo de infinidad de proyectos que hay que mantener y por eso sigue siendo muy utilizada.
 \newline
 
-Según la encuesta de StackOverflow del 2022 \cite{encuesta2022} estos son los lenguajes de programación más usados: 
-\begin{enumerate}
-	\item JavaScript
-	\item Python
-	\item TypeScript
-	\item Java
-	\item Bash/Shell
-	\item C\#
-	\item C++
-	\item PHP
-	\item PowerShell
-	\item Go
-	\item Rust
-\end{enumerate}
+Para estilizar las páginas se utiliza el lenguaje \textit{CSS}, pero debido a la naturaleza del mismo, en aplicaciones grandes el código \textit{CSS} crece demasiado y se hace muy difícil de mantener, por eso en algunas ocasiones los desarrolladores optan por usar frameworks que eviten de cierta manera estas complicaciones, dos de los más usados en la actualidad son \href{getbootstrap.com}{Bootstrap} \cite{bootstrap}, y \href{tailwindcss.com}{Tailwind CSS} \cite{tailwind}.
+\newline
+
+\textit{Bootstrap} está más orientado a componentes, por lo que agiliza el desarrollo y su diseños son menos personalizables. Esto hace que la mayoría de las páginas que usan este marco de trabajo luzcan bastante parecidas. \textit{Tailwind} es orientado a utilidades, por lo que para construir un componente es necesario aplicar un mayor número de clases, entorpeciendo así el desarrollo y permitiendo dar más originalidad en los diseños. El uso de uno y el otro depende de los gustos personales de cada cual y las necesidades de cada proyecto. Usar \textit{CSS} puro también suele ser una opción en los equipos de desarrollo.
+\newline
+
+En el caso del backend existe una mayor variedad de tecnologías, por lo que los desarrolladores suelen elegir la que más se adecúa al proyecto que buscan desarrollar, en estos casos es casi imprescindible utilizar un framework, ya que las bases de código, incluso en aplicaciones no tan complejas, suelen crecer muchísimo por lo que puede haber problemas en el mantenimiento de las mismas y pueden surgir agujeros de seguridad.
+\newline
+
+Según la encuesta de StackOverflow del 2022 \cite{encuesta2022} los lenguajes de programación más usados son
+	 JavaScript,
+	 Python,
+	 TypeScript,
+	 Java,
+	 C\#,
+	 C++,
+	 PHP,
+	 Go y
+	 Rust.
 No se incluyeron en la lista lenguajes de marcado y estilos (\textit{HTML} y \textit{CSS}) ni lenguajes de consulta (\textit{SQL})
 \newline
 
-Para almacenar los datos en una aplicación se utilizan motores de base de datos, según la encuesta de StackOverflow de 2022 \cite{encuesta2022} estos son los más utilizados:
-\begin{enumerate}
-	\item MySQL
-	\item PostgreSQL
-	\item SQLite
-	\item MongoDB
-	\item Microsoft SQL Server
-	\item Redis
-\end{enumerate}
+\textit{Javascript}, debido a la amplia popularidad del desarrollo web, se ha convertido en un lenguaje dominado por muchas personas alrededor del mundo, en sus inicios fue pensado para correr en los navegadores, pero gracias a proyectos como \textit{Node.js} \cite{node} también puede correr en servidores. Uno de sus marcos de trabajo del lado del servidor más populares  es \textit{Express.js} \cite{express}.
+\newline
+
+\textit{Python} es uno de los lenguaje más usados en ciencia de datos e inteligencia artificial por la multitud de bibliotecas que posee. Por su simpleza y elegancia se ha vuelto muy popular y se han desarrollado frameworks de desarrollo web tales como \textit{Django} \cite{django}, \textit{Flask} \cite{flask} y \textit{Fast Api} \cite{fastapi}.
+\newline
+
+\textit{Go} \cite{golang} es muy interesante, es relativamente nuevo y fue creado por \textit{Google} con el objetivo de competir lo mejor posible con \textit{C} y \textit{C++} en cuestiones de velocidad, pero agregando recolección de basura y otras características de alto nivel. Está optimizado para usar concurrencia, y provee herramientas para desarrollar aplicaciones concurrentes. Desde su creación se volvió muy popular y ya cuenta con multitud de frameworks para desarrollo web, \textit{Gorilla} \cite{gorilla}, \textit{Buffalo} \cite{buffalo} y \textit{Gin} \cite{gin} son algunos de los más populares.
+\newline
+
+La persistencia de los datos en el tiempo es algo que deben cumplir la mayoría de las aplicaciones, esta es una parte fundamental en el desarrollo de software. Para llevar a cabo esta tarea se usan bases de datos: estas se clasifican en \textbf{relacionales} y \textbf{no relacionales}.
+\newline
+
+El modelo \textbf{relacional} \cite{bd_relational} fue desarrollado por Edgar F. Codd en los laboratorios de \textit{IBM} y publicado en un artículo \cite{bd_relational} en 1970. Este plantea, entre otras cosas, que una base de datos va a estar compuesta por una o varias tablas (relaciones), cada tabla va a tener un conjunto de campos (columnas) y filas (registros). Cada registro en una tabla puede ser identificado con uno o varios campos llamados clave primaria. Las tablas pueden contener campos para almacenar llaves ajenas, y de esta forma establecer relación con otra tabla. Este aporte, entre otros, hizo a Codd merecedor del premio \textit{Turing} \cite{codd_turing} en 1981.
+\newline
+
+Las bases de datos \textbf{no relacionales} (o NoSQL) \cite{nosql} son una alternativa a las bases de datos relacionales que ha ido tomando auge en el presente siglo, son usadas generalmente cuando se requiere de mayor flexibilidad, o para aplicaciones que necesitan escalar a masivas cantidades de usuarios manteniendo tiempos rápidos de respuesta.
+\newline
+
+Las bases de datos requieren de un software que permita su administración. Estos programas especializados sirven como interfaz para que los usuarios puedan, administrar como se estructura y optimiza toda la información recopilada. Un sistema de administración de bases de datos también permite un gran número de operaciones relacionadas con la administración, tal como, supervisar la productividad, ajustes, backups y restauración de los datos. Según la encuesta de StackOverflow de 2022 \cite{encuesta2022} los más utilizados son MySQL, PostgreSQL, SQLite, MongoDB, Microsoft SQL Server y Redis.
+\newline
+
 
 Al igual que pasa con \textit{CSS}, el código de base de datos en aplicaciones grandes suele crecer muchísimo, hasta el punto que se convierte prácticamente en otro proyecto para mantener, para resolver este problema existen los ORM (Object–relational mapping) \cite{orm}, una técnica de programación para convertir datos entre sistemas de tipos usando lenguajes de programación orientado a objetos. Esto crea una base de datos virtual que puede ser usada desde un lenguaje de programación. Hay una gran cantidad de ORM's en todos (o casi todos) los lenguajes de programación.
 \newline
 
 Otro de los problemas habituales a la hora de desarrollar una aplicación son las diferencias entre los entornos de desarrollo y producción, en ocasiones las diferencias de sistemas operativos y/o versiones de paquetes instalados entre uno y el otro pueden causar inconvenientes. Afortunadamente hay una herramienta que hace que el desarrollo de una aplicación sea más eficiente y predecible, eliminando tareas de configuración repetitivas, estoy hablando de \href{docker.com}{Docker} \cite{docker_docs}. Según la encuesta de 2022 de Stackoverflow \cite{encuesta2022} Docker es la herramienta más amada por los desarrolladores.
 
-\section{Sistemas de resolución de dudas relevantes}
-
-Existen sistemas de resolución de preguntas que traen ideas novedosas que pueden ser tenidas en cuenta, a continuación se presentan algunos de ellos:
-
-\subsection{NSIR}
-
-\textbf{NSIR} es un sistema desarrollado por la Universidad de Michigan que responde preguntas de forma automática. Dada una pregunta \textbf{NSIR} obtiene los principales resultados devueltos por motores de búsqueda (\href{google.com}{Google}, \href{yahoo.com}{Yahoo}, etc), los analiza y extrae de estos un conjunto de posibles respuestas, luego estas son evaluadas usando novedosas métricas, y de ahí retornan al usuario las respuestas con mejor calificación \cite{nsir}.
 
 
-\subsection{Schema2QA}
-
-\textbf{Schema2QA} es una herramienta de código abierto para generar sistemas de preguntas y respuestas a partir de un esquema de base de datos con unas pocas anotaciones sobre sus campos \cite{s2qa}. Este sistema intenta cubrir el espacio de consultas con un gran número de preguntas del dominio. Luego los datos obtenidos son usados para entrenar un modelo del lenguaje basado en \textit{BERT} \cite{bert}. Este sistema ha sido utilizado en dominios como los restaurantes, libros, música, entre otros, y alcanzado muy buenos resultados \cite{s2qa}.
 
 
-\subsection{SmartQ}
-
-\textbf{SmartQ} es un sistema de preguntas y respuestas basado en la reputación de los usuarios. Propone un mecanismo inteligente en la que hay usuarios especializados en diversas temáticas, y cuando alguien hace una pregunta esta es clasificada y enviada a personas expertas en el tema. Los usuarios van construyendo una reputación a medida que aportan respuestas valiosas a lo largo del tiempo. En el sistema también existe un mecanismo de seguidores en el que algunos usuarios expresan su confianza en otros, además de un sistema anti spam \cite{smartq}.
 
