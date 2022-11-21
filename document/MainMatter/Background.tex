@@ -1,19 +1,13 @@
 \chapter{Estado del Arte}\label{chapter:state-of-the-art}
 
-La resolución de dudas es algo cotidiano, la mayoría de las empresas e instituciones lidian con las dudas de sus clientes a diario, ya sea por redes sociales o por sus páginas oficiales. Los sistemas de gestión de dudas son softwares que facilitan esta comunicación entre una empresa/institución y una persona externa con alguna inquietud. Estos sistemas se pueden dividir en 3 grupos: manuales, automatizados, e híbridos.
+La resolución de dudas es algo cotidiano, la mayoría de las empresas e instituciones lidian con las dudas de sus clientes a diario. Los sistemas de gestión de dudas son softwares que facilitan esta comunicación entre una empresa/institución y una persona externa con alguna inquietud. Años atrás si alguien tenía una duda, debía ir personalmente a preguntar, o hacer una llamada telefónica, lo que causaba colas y obligaba a las empresas a habilitar varias líneas telefónicas, e incluso, todo una oficina con personas atendiendo llamadas, afortunadamente, esto ya no es un problema. Con el desarrollo de internet y la informática ha cambiado el paradigma de la resolución de dudas, en la actualidad es común que existan aplicaciones que ayuden a gestionar incidencias e inquietudes, estas aplicaciones necesitan ser programadas, mantenidas con el tiempo, y adaptadas a las necesidades de cada institución, por lo que el desarrollo de software juega un papel fundamental.
 \newline
 
-Los sistemas manuales son aquellos en los que todo el proceso, desde que alguien expresa su inquietud, hasta que se le da respuesta, es realizado por personas, sin empleo de ninguna técnica de inteligencia artificial.
-\newline
-
-Los automatizados son aquellos en los que no intervienen personas en ninguna parte del proceso.
-\newline
-
-Y los híbridos son una mezcla de los dos anteriores, seres humanos participan en el proceso, pero son asistidos por inteligencia artificial. Mecanismos como la clasificación automática de preguntas, y chatbots que interactúan con el cliente, son de los más habituales en este tipo de sistemas. 
+Los sistemas de gestión de dudas se pueden dividir en 3 grupos: manuales, automatizados, e híbridos. Los manuales son aquellos en los que todo el proceso, desde que alguien expresa su inquietud, hasta que se le da respuesta, es realizado por personas, sin empleo de ninguna técnica de inteligencia artificial. Los automatizados son aquellos en los que no intervienen personas en ninguna parte del proceso. Y los híbridos son una mezcla de los dos anteriores, seres humanos tienen participación, pero son asistidos por inteligencia artificial, mecanismos como la clasificación automática de preguntas, y chatbots que interactúan con el cliente, son de los más habituales en este tipo de sistemas. 
 
 \subsection{Sistemas manuales e híbridos}
 
-Hay varios softwares de este tipo en el mercado que son usados por múltiples empresas, a continuación se presentan algunos de los más populares:
+Hay varios softwares de este tipo en el mercado que son usados por múltiples empresas, son más populares que los automatizados pues las compañías prefieren brindar atención personalizada a sus clientes y no depender de un modelo de precisión dudosa, a continuación se presentan algunos de los más mencionados:
 \newline
 
 \textbf{\href{https://www.helpscout.com/}{Help Scout}}
@@ -37,23 +31,23 @@ Es una herramienta poderosa que incluye diversas opciones como ventas, marketing
 \textbf{\href{https://freshdesk.com/}{Freshdesk}}
 \newline
 
-Herramienta de servicio al cliente empoderada con inteligencia artificial que ayuda a automatizar varias tareas. Posee un increíble feature de recomendarle al equipo artículos relacionados con cada incidencia para ayudarlos a resolverla. Tiene un sistema colaborativo que ayuda a diversos miembros del equipo a trabajar juntos en pro de la solución al problema. Tiene un sistema de auto asignación basado en inteligencia artificial que asigna una incidencia al mejor agente posible para esta. Es personalizable y tiene herramientas de analítica. Tiene un plan gratuito.
+Herramienta de servicio al cliente empoderada con inteligencia artificial que ayuda a automatizar varias tareas. Posee un increíble feature de recomendarle al equipo artículos relacionados con cada incidencia para ayudarlos a resolverla. Cuenta con un sistema colaborativo que ayuda a diversos miembros del equipo a trabajar juntos en pro de la solución al problema. Integra un mecanismo de auto asignación basado en inteligencia artificial que asigna una incidencia al mejor agente posible para esta. Es personalizable y tiene herramientas de analítica. Se puede usar de forma gratuita.
 \newline
 
-Como se puede apreciar estas herramientas están pensadas para empresas, son software ya desarrollados a los que no se les pueden realizar modificaciones y tienen un precio elevado (en los caso de Freshdesk y HubSpot tienen un plan gratuito, pero si se quiere disfrutar de los mejores features es necesario cambiarse a un plan de pago).
+Como se puede apreciar estas herramientas están pensadas para empresas, son software ya desarrollados a los que no se les pueden realizar modificaciones y tienen un precio elevado,en los casos de Freshdesk y HubSpot tienen un plan gratuito, pero si se quiere disfrutar de los mejores features es necesario cambiarse a un plan de pago.
 
 \section{Sistemas automatizados}
 
-En los sistemas de resolución de dudas, en muchas ocasiones, el volumen de preguntas es de tal magnitud que se necesitan a muchas personas pendientes, por lo que se han hecho estudios en pro de conseguir sistemas de resolución de dudas automatizados, los cuales hacen uso de una fusión entre sistemas de recuperación de información \cite{ir}, y modelos de procesamiento de lenguaje natural \cite{nlp}.
+En los sistemas de resolución de dudas, en muchas ocasiones, el volumen de preguntas no crece de forma proporcional con la cantidad de personas de la compañía, por lo que se han hecho estudios a favor de conseguir sistemas de resolución de dudas automatizados, los cuales hacen uso de una fusión entre sistemas de recuperación de información \cite{ir}, y modelos de procesamiento de lenguaje natural \cite{nlp}.
 \newline
 
 La \textbf{recuperación de información} \cite{ir} en computación es el proceso de obtener recursos relevantes dentro de una colección de documentos dada una consulta. Existen sistemas de este tipo que son usados cada día por millones de usuarios, para recuperar texto, imágenes, videos, audios, etc. El motor de búsqueda de \href{google.com}{Google} y el buscador de \href{youtube.com}{Youtube} son solo un par de ejemplos.
 \newline
 
-Estos sistemas ayudan, pero son insuficientes por sí solos, ya que sus usuarios deben revisar los documentos devueltos manualmente, verificar que en efecto era lo que estaban buscando, y luego encontrar o deducir en el contenido de los mismos la respuesta a su pregunta, lo que es una tarea tediosa sobre todo si el usuario no dispone del tiempo necesario para llevarla a cabo, y aún más teniendo en cuenta que la precisión de estos sistemas en la mayoría de las ocasiones deja mucho que desear.
+Los sistemas de recuperación de información ayudan, pero son insuficientes por sí solos, ya que sus usuarios deben revisar los documentos devueltos manualmente, verificar que en efecto era lo que estaban buscando, y luego encontrar o deducir en el contenido de los mismos la respuesta a su pregunta, lo que es una tarea tediosa sobre todo si el usuario no dispone del tiempo necesario para llevarla a cabo, y aún más teniendo en cuenta que la precisión de estos sistemas en la mayoría de las ocasiones no termina siendo la esperada.
 \newline
 
-Para solventar ese problema en los últimos años ha habido un auge en el \textbf{procesamiento de lenguaje natural} \cite{nlp}, el cual es un campo de la inteligencia artificial que estudia la interacción entre las computadores y el lenguaje humano, este se encarga del desarrollo de mecanismos para la comunicación entre humanos y máquinas por medio del lenguaje natural. Gracias a los esfuerzos realizados por diversas instituciones, se han creado varios modelos muy poderosos, entre los que destacan \textbf{BERT} \cite{bert} y \textbf{GPT-3} \cite{gpt}.
+Para que los usuarios no pierdan tiempo buscando entre muchos documentos, en los últimos años ha habido un auge en el \textbf{procesamiento de lenguaje natural} \cite{nlp}, el cual es un campo de la inteligencia artificial que estudia la interacción entre las computadores y el lenguaje humano, este se encarga del desarrollo de mecanismos para la comunicación entre humanos y máquinas por medio del lenguaje natural. Gracias a los esfuerzos realizados por diversas instituciones, se han creado varios modelos muy poderosos, entre los que destacan \textbf{BERT} \cite{bert} y \textbf{GPT-3} \cite{gpt}.
 \newline
 
 \textbf{BERT} (Bidirectional Encoder Representations from Transformers) es un modelo del lenguaje desarrollado por \href{google.com}{Google} y presentado en 2018 a través de un artículo, el cual fue merecedor del Best Long Paper
@@ -86,31 +80,36 @@ Los sistemas de resolución de dudas automatizados son menos comunes que los man
  
  A continuación, a modo de resumen, se muestra una tabla comparativa de los sistemas previamente descritos.\newline
  
- 
- \begin{tabular}{| c | c | c | c | c |}
- 	\hline
- 	Sistema & De código abierto & Gratuito & Listo para usar & Tipo \\ \hline
- 	Help Scout & No & Sí & Si & Manual \\ \hline 
- 	Zendesk & No & No & Sí & Híbrido \\ \hline
- 	HubSpot & No & No & Sí & Híbrido \\ \hline
- 	Freshdesk & No & Sí & Sí & Híbrido \\ \hline
- 	NSIR & No & No & No & Automatizado \\ \hline
- 	Schema2QA & Sí & Sí & No & Automatizado \\ \hline
- 	
- \end{tabular}\newline
+\begin{table}[h]
+	 \begin{tabular}{| c | c | c | c | c |}
+		\hline
+		Sistema & De código abierto & Gratuito & Listo para usar & Tipo \\ \hline
+		Help Scout & No & Sí & Si & Manual \\ \hline 
+		Zendesk & No & No & Sí & Híbrido \\ \hline
+		HubSpot & No & No & Sí & Híbrido \\ \hline
+		Freshdesk & No & Sí & Sí & Híbrido \\ \hline
+		NSIR & No & No & No & Automatizado \\ \hline
+		Schema2QA & Sí & Sí & No & Automatizado \\ \hline
+		
+	\end{tabular}
+\caption{Comparación de sistemas de incidencias existentes}
+\label{Sistemas de incidencias}
+\end{table}
+
+En estos ejemplos los que están listos para usar no son de código abierto por lo que no se pueden personalizar a medida, los automatizados requieren de trabajo de entrenamiento de grandes modelos del lenguaje. Los híbridos serían la mejor opción porque se pueden dar respuestas de calidad con empleo de personal calificado y tienen mecanismos que ayudan a los usuarios a ser más productivos; pero son bastante caros en su mayoría o cuentan con un plan gratuito con muy pocas funcionalidades.
 
 \section{Desarrollo de software}
 
 Todos (o casi todos) los sistemas informáticos requieren de una interfaz amigable, una arquitectura, necesitan ser seguros, almacenar datos, y para ello se usan lenguajes de programación, bibliotecas, frameworks, motores de bases de datos y técnicas de desarrollo.
 \newline
 
-En la actualidad el desarrollo web está de moda por la facilidad que brinda de ser usado en cualquier dispositivo y en cualquier lugar, solo con un navegador y una conexión a internet. La mayoría de las aplicaciones más usadas a nivel mundial (\href{instagram.com}{Instagram}, \href{youtube.com}{Youtube}, \href{https://web.whatsapp.com/}{Whatsapp}) cuentan con una versión web.
+En los últimos años se ha popularizado el desarrollo web debido a la facilidad que brinda de ser usado en cualquier dispositivo y en cualquier lugar, solo con un navegador y una conexión a internet. La mayoría de las aplicaciones más usadas a nivel mundial (\href{instagram.com}{Instagram}, \href{youtube.com}{Youtube}, \href{https://web.whatsapp.com/}{Whatsapp}) cuentan con una versión web.
 \newline
 
 Una aplicación web consta de 2 partes, el \textbf{Backend} y el \textbf{Frontend}. El \textbf{frontend} es la parte que corre en el dispositivo del usuario final, y se encarga de mostrar una interfaz con la que este puede interactuar para conseguir un objetivo. El \textbf{backend}, por otro lado, es la parte que corre en servidores y se encarga de la lógica del negocio, la seguridad, la persistencia de los datos, etc. El \textbf{frontend} interactúa con el \textbf{backend} para guardar, modificar, o acceder a información.
 \newline
 
-Los días en que bastaba \textit{HTML}, \textit{CSS} y \textit{Javascript Vanilla} (Javascript sin bibliotecas ni frameworks de terceros) para construir el frontend de una aplicación quedaron atrás. La complejidad de los productos actuales ha hecho que sea prácticamente imposible mantener software con estas tecnologías, por lo que los frameworks y bibliotecas de Javascript son prácticamente obligatorios a la hora de desarrollar una buena aplicación.
+En lo inicios de la web se usaban principalmente \textit{HTML}, \textit{CSS} y \textit{Javascript Vanilla} (Javascript sin bibliotecas ni frameworks de terceros) para construir el frontend de una aplicación. Pero la complejidad de los productos actuales ha hecho que sea prácticamente imposible mantener software con estas tecnologías, por lo que los frameworks y bibliotecas de Javascript son prácticamente obligatorios a la hora de desarrollar una buena web.
 \newline
 
 Según una encuesta desarrollada por StackOverflow \cite{encuesta2022} en 2022 los frameworks y/o bibliotecas más usados en el desarrollo frontend son: \textit{React.js}, \textit{jQuery}, \textit{Angular} y \textit{Vue.js}.
@@ -119,7 +118,7 @@ Según una encuesta desarrollada por StackOverflow \cite{encuesta2022} en 2022 l
 \textbf{React.js} \cite{react}, \textbf{Angular} \cite{angular} y \textbf{Vue.js} \cite{vue} son bibliotecas y/o frameworks de \textit{Javascript} para el desarrollo de interfaces de usuario interactivas. Básicamente con estas herramientas se pueden construir aplicaciones web grandes y complejas cuyas vistas son actualizadas sin necesidad de refrescar la página.
 \newline
 
-\textbf{JQuery} \cite{jquery}, por su lado, es una biblioteca de \textit{Javascript} lanzada en 2006 para facilitar el manejo del DOM, la creación de animaciones, las peticiones AJAX, el manejo de eventos, entre otras funcionalidades en el desarrollo web. JQuery, en sus inicios, se volvió extremadamente popular y, aunque a día de hoy no suele ser la mejor opción, está en el núcleo de infinidad de proyectos que hay que mantener y por eso sigue siendo muy utilizada.
+\textbf{JQuery} \cite{jquery}, por su lado, es una biblioteca de \textit{Javascript} lanzada en 2006 para facilitar el manejo de los elementos de la página, la creación de animaciones, las peticiones a servidores sin necesidad de refrescar, el manejo de eventos, entre otras funcionalidades en el desarrollo web. JQuery, en sus inicios, se volvió extremadamente popular y, aunque a día de hoy no suele ser la mejor opción, está en el núcleo de infinidad de proyectos que hay que mantener y por eso sigue siendo muy utilizada.
 \newline
 
 Para estilizar las páginas se utiliza el lenguaje \textit{CSS}, pero debido a la naturaleza del mismo, en aplicaciones grandes el código \textit{CSS} crece demasiado y se hace muy difícil de mantener, por eso en algunas ocasiones los desarrolladores optan por usar frameworks que eviten de cierta manera estas complicaciones, dos de los más usados en la actualidad son \href{getbootstrap.com}{Bootstrap} \cite{bootstrap}, y \href{tailwindcss.com}{Tailwind CSS} \cite{tailwind}.
@@ -166,10 +165,10 @@ Las bases de datos requieren de un software que permita su administración. Esto
 \newline
 
 
-Al igual que pasa con \textit{CSS}, el código de base de datos en aplicaciones grandes suele crecer muchísimo, hasta el punto que se convierte prácticamente en otro proyecto para mantener, para resolver este problema existen los ORM (Object–relational mapping) \cite{orm}, una técnica de programación para convertir datos entre sistemas de tipos usando lenguajes de programación orientado a objetos. Esto crea una base de datos virtual que puede ser usada desde un lenguaje de programación. Hay una gran cantidad de ORM's en todos (o casi todos) los lenguajes de programación.
+Al igual que pasa con \textit{CSS}, el código de base de datos en aplicaciones grandes suele crecer muchísimo, hasta el punto que se convierte prácticamente en otro proyecto para mantener, para resolver este problema existen los ORM (Object–relational mapping) \cite{orm}, una técnica de programación para convertir datos entre sistemas de tipos usando lenguajes de programación orientado a objetos. Los ORM's crean una base de datos virtual que puede ser usada desde un lenguaje de programación.
 \newline
 
-Otro de los problemas habituales a la hora de desarrollar una aplicación son las diferencias entre los entornos de desarrollo y producción, en ocasiones las diferencias de sistemas operativos y/o versiones de paquetes instalados entre uno y el otro pueden causar inconvenientes. Afortunadamente hay una herramienta que hace que el desarrollo de una aplicación sea más eficiente y predecible, eliminando tareas de configuración repetitivas, estoy hablando de \href{docker.com}{Docker} \cite{docker_docs}. Según la encuesta de 2022 de Stackoverflow \cite{encuesta2022} Docker es la herramienta más amada por los desarrolladores.
+Otro de los problemas habituales a la hora de desarrollar una aplicación son las diferencias entre los entornos de desarrollo y producción, en ocasiones las diferencias de sistemas operativos y/o versiones de paquetes instalados entre uno y el otro pueden causar inconvenientes. Afortunadamente hay varias herramientas que hacen que el desarrollo de una aplicación sea más eficiente y predecible, eliminando tareas de configuración repetitivas, una de las más usadas es \href{docker.com}{Docker} \cite{docker_docs}. Según la encuesta de 2022 de Stackoverflow \cite{encuesta2022} Docker es la herramienta de desarrollo de software más amada por los desarrolladores.
 
 
 
