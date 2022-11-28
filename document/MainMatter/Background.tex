@@ -1,11 +1,11 @@
 \chapter{Estado del Arte}\label{chapter:state-of-the-art}
 
-La resolución de dudas es algo cotidiano, la mayoría de las empresas e instituciones lidian con las dudas de sus clientes a diario. Los sistemas de gestión de dudas son softwares que facilitan esta comunicación entre una empresa/institución y una persona externa con alguna inquietud. Años atrás si alguien tenía una duda, debía ir personalmente a preguntar, o hacer una llamada telefónica, lo que causaba colas y obligaba a las empresas a habilitar varias líneas telefónicas, e incluso, todo una oficina con personas atendiendo llamadas, afortunadamente, esto ya no es un problema. Con el desarrollo de internet y la informática ha cambiado el paradigma de la resolución de dudas, en la actualidad es común que existan aplicaciones que ayuden a gestionar incidencias e inquietudes, estas aplicaciones necesitan ser programadas, mantenidas con el tiempo, y adaptadas a las necesidades de cada institución, por lo que el desarrollo de software juega un papel fundamental.
+La resolución de dudas es algo cotidiano, la mayoría de las empresas e instituciones lidian con las dudas de sus clientes a diario. Los sistemas de gestión de dudas son softwares que facilitan esta comunicación entre una institución y una persona externa con alguna inquietud. Años atrás si alguien tenía una duda, debía ir personalmente a preguntar, o hacer una llamada telefónica, lo que causaba colas y obligaba a las empresas a habilitar varias líneas telefónicas, e incluso, todo una oficina con personas atendiendo llamadas, afortunadamente, esto ya no es un problema. Con el desarrollo de internet y la informática ha cambiado el paradigma de la resolución de dudas, en la actualidad es común que existan aplicaciones que ayuden a gestionar incidencias e inquietudes, estas aplicaciones necesitan ser programadas, mantenidas con el tiempo, y adaptadas a las necesidades de cada institución, por lo que el desarrollo de software juega un papel fundamental.
 \newline
 
 Los sistemas de gestión de dudas se pueden dividir en 3 grupos: manuales, automatizados, e híbridos. Los manuales son aquellos en los que todo el proceso, desde que alguien expresa su inquietud, hasta que se le da respuesta, es realizado por personas, sin empleo de ninguna técnica de inteligencia artificial. Los automatizados son aquellos en los que no intervienen personas en ninguna parte del proceso. Y los híbridos son una mezcla de los dos anteriores, seres humanos tienen participación, pero son asistidos por inteligencia artificial, mecanismos como la clasificación automática de preguntas, y chatbots que interactúan con el cliente, son de los más habituales en este tipo de sistemas. 
 
-\subsection{Sistemas manuales e híbridos}
+\section{Sistemas manuales e híbridos}
 
 Hay varios softwares de este tipo en el mercado que son usados por múltiples empresas, son más populares que los automatizados pues las compañías prefieren brindar atención personalizada a sus clientes y no depender de un modelo de precisión dudosa, a continuación se presentan algunos de los más mencionados:
 \newline
@@ -31,10 +31,8 @@ Es una herramienta poderosa que incluye diversas opciones como ventas, marketing
 \textbf{\href{https://freshdesk.com/}{Freshdesk}}
 \newline
 
-Herramienta de servicio al cliente empoderada con inteligencia artificial que ayuda a automatizar varias tareas. Posee un increíble feature de recomendarle al equipo artículos relacionados con cada incidencia para ayudarlos a resolverla. Cuenta con un sistema colaborativo que ayuda a diversos miembros del equipo a trabajar juntos en pro de la solución al problema. Integra un mecanismo de auto asignación basado en inteligencia artificial que asigna una incidencia al mejor agente posible para esta. Es personalizable y tiene herramientas de analítica. Se puede usar de forma gratuita.
+Herramienta de servicio al cliente empoderada con inteligencia artificial que ayuda a automatizar varias tareas. Posee características destacables con respecto a la generación de sugerencias de cara al equipo, con información relacionada con el incidente en cuestión. Cuenta con un sistema colaborativo que ayuda a diversos miembros del equipo a trabajar juntos en pro de la solución al problema. Integra un mecanismo de auto asignación basado en inteligencia artificial que asigna una incidencia al mejor agente posible para esta. Es personalizable y tiene herramientas de analítica. Se puede usar de forma gratuita.
 \newline
-
-Como se puede apreciar estas herramientas están pensadas para empresas, son software ya desarrollados a los que no se les pueden realizar modificaciones y tienen un precio elevado,en los casos de Freshdesk y HubSpot tienen un plan gratuito, pero si se quiere disfrutar de los mejores features es necesario cambiarse a un plan de pago.
 
 \section{Sistemas automatizados}
 
@@ -57,7 +55,7 @@ Award en la Conferencia Anual del 2019 de la North American Chapter of the Assoc
 \textbf{GPT-3} (Generative Pre-trained Transformer 3) es un modelo del lenguaje desarrollado por \href{https://openai.com/}{Open AI} capaz de generar textos que simulan la redacción humana. Este poderoso modelo de 175 000 millones de parámetros desde su creación se ha destacado por generar textos de alta calidad.
 \newline
 
-Entrenar estos modelos es una tarea titánica para la que se necesita una cantidad absurda de datos y hardware de última generación, por lo que se precisa de inversiones millonarias en infraestructura para poder conseguirlo.
+Entrenar estos modelos es una tarea titánica para la que se necesita una cantidad considerable de datos y hardware de última generación, por lo que se precisa de inversiones millonarias en infraestructura para poder conseguirlo.
 \newline
 
 En el año 2016 fue fundada \href{https://huggingface.co/}{Hugging Face} \cite{hugging_face}, una compañía especializada en el desarrollo de herramientas y aplicaciones con el uso de machine learning, y han lanzado una plataforma llamada \textbf{Hugging Face Hub} \cite{hugging_face_hub}, en la que son compartidos muchísimos datasets y modelos que son usados y mejorados por la comunidad. Esto ha democratizado de cierta manera el uso de los grandes avances del aprendizaje automático.
@@ -71,12 +69,8 @@ Los sistemas de resolución de dudas automatizados son menos comunes que los man
 
 \textbf{Schema2QA} \cite{s2qa} es una herramienta de código abierto para generar sistemas de preguntas y respuestas a partir de un esquema de base de datos con unas pocas anotaciones sobre sus campos \cite{s2qa}. Este sistema intenta cubrir el espacio de consultas con un gran número de preguntas del dominio. Luego los datos obtenidos son usados para entrenar un modelo del lenguaje basado en \textit{BERT} \cite{bert}. Este sistema ha sido utilizado en dominios como los restaurantes, libros, música, entre otros, y alcanzado muy buenos resultados. No es un sistema listo para usar ya que requiere de un trabajo previo por especialistas para adaptarlo al área para el que se quiera implementar.
 \newline
-
-
- En el caso de NSIR es un sistema muy interesante, con el inconveniente de que no es de código abierto, y requeriría de un equipo de especialistas capaces de estudiar a fondo el artículo e intentar replicarlo y adaptarlo a sus necesidades específicas. Por último Schema2QA sí es de código abierto, pero no está listo para usar, e igualmente requeriría de un grupo de expertos capaces de estudiar a fondo las herramientas que proponen, además de que requiere un esquema de bases de datos para su utilización y de infraestructura para entrenar un modelo del lenguaje.
- \newline
  
- \section{Resumen}
+ \section{Comparación de los principales sistemas de gestión de incidencias}
  
  A continuación, a modo de resumen, se muestra una tabla comparativa de los sistemas previamente descritos.\newline
  
@@ -96,7 +90,7 @@ Los sistemas de resolución de dudas automatizados son menos comunes que los man
 \label{Sistemas de incidencias}
 \end{table}
 
-En estos ejemplos los que están listos para usar no son de código abierto por lo que no se pueden personalizar a medida, los automatizados requieren de trabajo de entrenamiento de grandes modelos del lenguaje. Los híbridos serían la mejor opción porque se pueden dar respuestas de calidad con empleo de personal calificado y tienen mecanismos que ayudan a los usuarios a ser más productivos; pero son bastante caros en su mayoría o cuentan con un plan gratuito con muy pocas funcionalidades.
+En estos ejemplos los que están listos para usar no son de código abierto por lo que no se pueden personalizar a medida,  Entre los automatizados destaca NSIR, un sistema muy interesante, con el inconveniente de que no es de código abierto, y requeriría de un equipo de especialistas capaces de estudiar a fondo el artículo e intentar replicarlo y adaptarlo a sus necesidades específicas, Schema2QA sí es de código abierto, pero no está listo para usar, e igualmente requeriría de un grupo de expertos capaces de estudiar a fondo las herramientas que proponen, además de que requiere un esquema de bases de datos para su utilización y de infraestructura para entrenar un modelo del lenguaje. Los híbridos serían la mejor opción porque se pueden dar respuestas de calidad con empleo de personal calificado y tienen mecanismos que ayudan a los usuarios a ser más productivos, pero están pensadas para empresas, por lo que son bastante caros o cuentan con un plan gratuito con muy pocas funcionalidades.
 
 \section{Desarrollo de software}
 

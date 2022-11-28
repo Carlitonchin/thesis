@@ -1,12 +1,16 @@
-\chapter{Detalles de Implementación y Experimentos}\label{chapter:implementation}
+\chapter{Detalles de Implementación}\label{chapter:implementation}
 
-(figura \ref{fig:arquitecture}) El proyecto está compuesto por una REST API desarrollada en \href{https://gin-gonic.com/}{Gin} y un frontend desarrollado con \href{https://nuxtjs.org/}{Nuxt.js}.
+En el presente capítulo se presentan detalles de la implementación de la solución propuesta anteriormente, pasando por las tecnologías empleadas, la estructura de la base de datos, el backend y terminando con el frontend.
 \newline
 
-Para el backend se usará una base de datos \href{https://www.postgresql.org/}{PostgreSQL} que será manejada a través del \textit{ORM} \href{https://gorm.io/}{Gorm}, se usará un sistema de \textit{JWT} para la autenticación, y los tokens de los usuarios se almacenarán en memoria usando una base de datos \href{https://redis.io/}{Redis}.
+\section{Tecnologías empleadas}
+
+(figura \ref{fig:arquitecture}) Para conseguir desacoplar al máximo el desarrollo, el proyecto se compuso de una REST API desarrollada en \href{https://gin-gonic.com/}{Gin} y un frontend desarrollado con \href{https://nuxtjs.org/}{Nuxt.js}.
 \newline
 
-Para el frontend estaremos usando la \href{https://nuxtjs.org/}{Nuxt.js} en su versión 3.0, y nos apoyaremos de \href{https://tailwindcss.com/}{Tailwind CSS} para estilizar las vistas.
+Para tener el mecanismo de usuarios con roles, áreas, así como almacenar las preguntas, clasificaciones, y respuestas, hace falta una base de datos, en este caso se usó \href{https://www.postgresql.org/}{PostgreSQL} que fue manejada a través del \textit{ORM} \href{https://gorm.io/}{Gorm} para facilitar el desarrollo. No todos los usuarios pueden acceder a todas las funcionalidades, por eso se empleó un mecanismo de autenticación y autorización con tokens \textit{JWT}, y para manejar la caché en el servidor se usó la base de datos en memoria \textit{Redis}.
+\newline
+
 
 \begin{figure}[h]
 	\includegraphics[width=15cm, height=11.25cm]{arquitecture.png}
@@ -289,36 +293,3 @@ Para la autenticación almacenamos los datos del usuario y su token \textit{JWT}
 
 Toda la lógica de los llamados a la API del backend se separó en la carpeta \textit{'api'} para mantenerla desacoplada de los componentes visuales.
 
-\section{Experimentos}
-
-Para comprobar que todo funcionaba correctamente se prepararon varias pruebas, se crearon 500 usuarios: 100 con nombres \textit{'estudiante1'}, \textit{'estudiante2}, ... , \textit{estudiante100}, otros 100 con nombre \textit{'clasificador1'}, ... \textit{clasificador100}, y así con el resto de los roles, luego de esto se verificó que existían 501 usuarios, un administrador que se crea automáticamente al ejecutar el backend por primera vez, y los 500 creados en la prueba, se verificó que existían 100 de cada grupo leyendo los prefijos en sus nombres.
-\newline
-
-Luego, usando el administrador creado por defecto, se le cambió el rol a cada usuario dependiendo de su nombre, a los que tenían prefijo 'estudiante' se le asignó dicho rol, igualmente con el resto de los roles. Al concluir se verificó que los prefijos en los nombres coincidían con el rol de cada usuario.
-\newline
-
-También se crearon satisfactoriamente 5 áreas, llamadas \textit{'area1'}, \textit{'area2'}, ... y \textit{'area5'}, y se le asignó a cada especialista con \textit{'id mod 5 = i'} el \textit{'areai'}, la operación fue realizada con éxito.
-\newline
-
-Luego, con cada estudiante se escribió una pregunta, y con un clasificador se clasificó cada pregunta siguiendo el mismo patrón de las áreas de los especialistas. Con un especialista de cada área se tomaron las preguntas satisfactoriamente, las que provenían de estudiantes con id par se respondieron, y las de otras se subieron de nivel; con estas últimas se aplicó un procedimiento similar respondiendo las de estudiantes con id divisible por 4 y subiendo a la administración el resto para finalmente darles respuestas. Se comprobó durante todo el proceso que las tareas iban según lo planeado.
-\newline
-
-El sistema también se sometió a varias pruebas desde la interfaz del usuario, incluyendo la funcionalidad del chat (figuras \ref{fig:chat1} y \ref{fig:chat2}). No se detectaron errores en las mismas, aún así la plataforma debe lanzarse en una versión beta y probarse con usos reales.
-
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=10cm, height=5cm]{chat_test1.png}
-		\caption{Prueba de chat}
-		\label{fig:chat1}
-	\end{center}
-	
-\end{figure}
-
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=11cm, height=9.5cm]{chat_test2.png}
-		\caption{Prueba de chat}
-		\label{fig:chat2}
-	\end{center}
-	
-\end{figure}

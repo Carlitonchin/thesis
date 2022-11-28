@@ -1,5 +1,8 @@
 \chapter{Propuesta}\label{chapter:proposal}
 
+A continuación se analizan todas las herramientas con las que se cuentan para resolver la problemática, y se propone una solución atendiendo a cumplir todos los objetivos planteados.
+\newline
+
 Actualmente en la Universidad de La Habana la resolución de dudas se lleva a cabo presencialmente, o por teléfono. El proceso es complicado, ya que en muchas ocasiones el estudiante no sabe a quién preguntarle su inquietud y no todas las personas están informadas acerca de las distintas áreas existentes en la universidad, y de los especialistas responsables de cada una de ellas. Por esto es urgente contar con una plataforma capaz de resolver todos estos inconvenientes.
 \newline
 
@@ -15,21 +18,41 @@ Por otra parte, los sistemas manuales/híbridos que existen en el mercado, o son
 Es preciso que sea un proyecto web, por la facilidad que estos brindan de ser usados en cualquier lugar y dispositivo. Resulta necesario que cuente con un mecanismo de clasificación para poder llevar las preguntas a los especialistas de un área determinada (figura \ref{fig:clasification}). Otra característica importante que debe poseer es una especie de jerarquía dentro de cada área (figura \ref{fig:hierarchy}), pues pueden existir incidencias complicadas que solo los más experimentados estén capacitados para resolver.
 \newline
 
-
-(figura \ref{fig:myprop}) Con todo lo planteado anteriormente se pueden identificar 2 tipos de usuario, los que preguntan y los que responden. Dentro de los que responden debe haber un grupo encargado de clasificar las preguntas, y otro de darles respuesta directamente, estos últimos serán los especialistas, que deben pertenecer a un área y solo tendrán acceso a las preguntas clasificadas en dicha área. Como pueden existir preguntas complicadas que solo especialistas experimentados se encuentren capacitados para darles solución, debe existir una jerarquía dentro de los especialistas de cada área, algunos serán de nivel 1 y otros de nivel 2, los de nivel 2 solo deberán responder las dudas que los de nivel 1 hayan designado. Los estudiantes pueden cometer errores escribiendo sus dudas, por lo que un sistema completo debe proveer un chat en el que los responsables de responder y los estudiantes puedan aclarar cualquier punto dudoso en la pregunta. Por último debe haber personal responsable de configurar toda la jerarquía, decidir quién va a clasificar, quiénes serán los especialistas, a qué área van a pertenecer, qué áreas deben existir, este tipo de usuarios se denominarán administradores, un rol que deben tomar las personas más experimentadas y de mayores responsabilidades dentro de la universidad, los administradores también podrán responder preguntas excepcionales que no hayan podido ser resueltas por los especialistas. De esta manera se garantiza de que cada inquietud va a llegar a la persona capacitada para darle respuesta, y con este flujo y el personal adecuado se puede garantizar que los estudiantes resuelvan su duda en el menor tiempo posible.
-\newline
-
 \begin{figure}[h]
-	\includegraphics[width=15cm, height=11.25cm]{clasification.png}
+	
+	\begin{center}
+	\includegraphics[width=9.73cm, height=6.4cm]{clasification.png}
 	\caption{Mecanismo de clasificación}
 	\label{fig:clasification}
+	
+\end{center}
 \end{figure}
 
-\begin{figure}[h]
-	\includegraphics[width=15cm, height=11.25cm]{hierarchy.png}
-	\caption{Jerarquía}
-	\label{fig:hierarchy}
-\end{figure}
+
+	\begin{figure}[h]
+		
+		\begin{center}
+		\includegraphics[width=9.73cm, height=6.4cm]{hierarchy.png}
+		\caption{Jerarquía}
+		\label{fig:hierarchy}
+		
+	\end{center}
+	\end{figure}
+
+
+
+
+(figura \ref{fig:myprop}) Con todo lo planteado anteriormente se pueden identificar 2 tipos de usuarios, los que generan reportes y los que les dan solución. Dentro de los que responden debe haber un grupo encargado de clasificar las preguntas, y otro de darles respuesta directamente, estos últimos serán los especialistas, que deben pertenecer a un área y solo tendrán acceso a las preguntas clasificadas en dicha área. Dado que pueden existir preguntas complicadas que solo especialistas experimentados se encuentren capacitados para darles solución, se propone una jerarquía de 2 niveles de especialistas por cada área, de forma tal que las inquietudes que no tengan solución por los niveles más bajos lleguen a las personas con los conocimientos necesarios y, a la vez las personas con los conocimientos mas específicos no se vean abrumadas por dudas cotidianas.
+\newline
+
+ Los estudiantes pueden cometer errores escribiendo sus dudas, por lo que un sistema completo debe proveer un chat en el que los responsables de responder y los estudiantes puedan aclarar cualquier punto dudoso en la pregunta.
+ \newline
+ 
+  Por último, se define un rol de administrador, el encargado de decidir quién va a clasificar, quiénes serán los especialistas, a qué área van a pertenecer, qué áreas deben existir, este tipo de usuarios se denominarán administradores, un rol que deben tomar las personas más experimentadas y de mayores responsabilidades dentro de la universidad, los administradores también podrán responder preguntas excepcionales que no hayan podido ser resueltas por los especialistas.
+  \newline
+  
+   De esta manera se garantiza de que cada inquietud va a llegar a la persona capacitada para darle respuesta, y con este flujo y el personal adecuado se puede garantizar que los estudiantes resuelvan su duda en el menor tiempo posible.
+\newline
 
 
 \begin{figure}[h]
